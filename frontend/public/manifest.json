@@ -1,0 +1,25 @@
+{
+  "short_name": "The Cage",
+  "name": "The Cage SShop",
+  "icons": [
+    {
+      "src": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

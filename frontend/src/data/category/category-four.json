@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/disposables-cloud.png",
+    "subtitle": "287 Products",
+    "title": "Disposables",
+    "link": "/shop-filtered-grid/disposable"
+  },
+  {
+    "id": "2",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/e-liquids.png",
+    "subtitle": "65 Products",
+    "title": "E-Liquids",
+    "link": "/shop-filtered-grid/primeBar"
+  },
+  {
+    "id": "3",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/salt-nic.png",
+    "subtitle": "11 Products",
+    "title": "Salt Nic",
+    "link": "/shop-filtered-grid/salt-nic"
+  },
+  {
+    "id": "4",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/lost-mary.png",
+    "subtitle": "62 Products",
+    "title": "Lost Mary",
+    "link": "/shop-filtered-grid/lostmary"
+  },
+  {
+    "id": "5",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/flum.png",
+    "subtitle": "67 Products",
+    "title": "Flum",
+    "link": "/shop-filtered-grid/flum"
+  },
+  {
+    "id": "6",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/bugatti-1.png",
+    "subtitle": "9 Products",
+    "title": "Bugatti",
+    "link": "/shop-brand-grid/bugatti"
+  },
+  {
+    "id": "7",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/rolling-papers-cloud.png",
+    "subtitle": "5 Products",
+    "title": "Rolling Papers",
+    "link": "/shop-filtered-grid/rolling-papers"
+  },
+  {
+    "id": "8",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/glass.png",
+    "subtitle": "22 Products",
+    "title": "Glass Products",
+    "link": "/shop-filtered-grid/glass"
+  },
+  {
+    "id": "9",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/vaporizers.png",
+    "subtitle": "6 Products",
+    "title": "Vaporizers",
+    "link": "/shop-filtered-grid/vaporizers"
+  }
+]

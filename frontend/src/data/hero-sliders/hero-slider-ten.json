@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Welcome",
+    "subtitle": "The Cage",
+    "text": "Vapes, Smoke, and Accessories",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/home-hero-one.png",
+    "url": "/shop-grid-standard"
+  },
+  {
+    "id": 2,
+    "title": "Welcome",
+    "subtitle": "The Cage",
+    "text": "Vapes, Smoke, and Accessories",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/home-hero-one.png",
+    "url": "/shop-grid-standard"
+  }
+]

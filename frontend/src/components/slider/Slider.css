@@ -1,0 +1,42 @@
+/* Slider.css */
+
+/* Style for the next button */
+.swiper-button-next {
+    color: #7c65a9;
+    /* Change color */
+    
+    /* Add background */
+    padding: 7px;
+    /* Add padding */
+    
+    /* Make it round */
+}
+
+/* Style for the previous button */
+.swiper-button-prev {
+    color: #7c65a9;
+    /* Change color */
+    
+    /* Add background */
+    padding: 7px;
+    /* Add padding */
+    
+    /* Make it round */
+}
+
+/* Optional: Add hover effects */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #3fdda7;
+    /* Change color on hover */
+   
+}
+
+/* Optional: Add custom icons using ::before pseudo-element */
+.swiper-button-next::before,
+.swiper-button-prev::before {
+    font-size: 20px;
+    /* Adjust icon size */
+    content: '';
+    /* Use this to add custom icons if needed */
+}
