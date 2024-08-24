@@ -13,9 +13,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
-from dotenv import load_dotenv, dotenv_values 
-
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET')
+SECRET_KEY =  os.environ.get('SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://the-cage-sshop-800ff767dfb9.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'the-cage-sshop-800ff767dfb9.herokuapp.com']
 
 
 # Application definition
@@ -131,9 +128,9 @@ DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'cageDB',
-       'USER': os.getenv('DB_USER'),
-       'PASSWORD': os.getenv('DB_PASS'),
-       'HOST': os.getenv('DB_HOST'),
+       'USER': os.environ.get('DB_USER'),
+       'PASSWORD': os.environ.get('DB_PASS'),
+       'HOST': os.environ.get('DB_HOST'),
        'PORT': '5432'
    }
 }
