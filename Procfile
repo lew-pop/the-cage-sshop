@@ -1,1 +1,1 @@
-web: gunicorn backend.wsgi --log-file -
+web: ./bin/fixie-wrench 5432:database-1.c3wwg60s2d1x.us-west-1.rds.amazonaws.com:5432 & gunicorn backend.wsgi --log-file -
