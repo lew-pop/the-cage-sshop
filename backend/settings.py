@@ -205,4 +205,6 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 
 if os.getcwd() == '/app':
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
     DEBUG = False
