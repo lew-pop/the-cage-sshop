@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =  os.environ['SECRET']
+SECRET_KEY =  os.getenv("SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -128,9 +128,9 @@ DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'cage_1',
-       'USER': os.environ['DB_USER'],
-       'PASSWORD': os.environ['DB_PASS'],
-       'HOST': os.environ['DB_HOST'],
+       'USER': os.getenv("DB_USER"),
+       'PASSWORD': os.getenv("DB_PASS"),
+       'HOST': os.getenv("DB_HOST"),
        'PORT': '5432'
    }
 }
@@ -187,8 +187,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Dont forget to reset database connection and hide password
 AWS_QUERYSTRING_AUTH = False
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = 'the-cage-online-assets'
 
 
