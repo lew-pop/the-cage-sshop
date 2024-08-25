@@ -2,7 +2,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:8000/api",
+  baseUrl: "https://the-cage-sshop-800ff767dfb9.herokuapp.com/api",
   prepareHeaders: (headers, { getState }) => {
     const token = getState().userLogin.userInfo?.token;
     if (token) {
