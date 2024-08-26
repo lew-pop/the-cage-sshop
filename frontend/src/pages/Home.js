@@ -5,6 +5,8 @@ import LayoutOne from "../layouts/LayoutOne";
 import NewsletterThree from "../wrappers/newsletter/NewsletterThree";
 import HeroSliderTen from "../wrappers/hero-slider/HeroSliderTen";
 import CategoryFourSlider from "../wrappers/category/CategoryFourSlider";
+import ShopByBrandSlider from "../wrappers/category/ShopByBrandSlider";
+
 import MyProductSlider from "../wrappers/product/MyProductSlider";
 import MySlider from "../wrappers/product/MySlider";
 import { useListProductsQuery } from "../store/services/product";
@@ -32,7 +34,9 @@ const Home = () => {
         {/* hero slider */}
         <HeroSliderTen />
         {/* category */}
-        <CategoryFourSlider spaceTopClass="pt-100" spaceBottomClass="pb-95" />
+        <CategoryFourSlider spaceTopClass="pt-100" spaceBottomClass="pb-40" />
+        {/* category */}
+        <ShopByBrandSlider spaceTopClass="pt-40" spaceBottomClass="pb-95" />
         {/* pebble product slider */}
         <MyProductSlider
           category="pebble"

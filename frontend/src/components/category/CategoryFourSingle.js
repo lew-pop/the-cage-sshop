@@ -10,7 +10,7 @@ const CategoryFourSingle = ({ data, sliderClass }) => {
         </Link>
       </div>
       <div className="collection-content text-center">
-        <span>{data.subtitle}</span>
+        
         <h4>
           <Link to={process.env.PUBLIC_URL + data.link}>{data.title}</Link>
         </h4>

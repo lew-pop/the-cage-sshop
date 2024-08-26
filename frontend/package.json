@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "proxy": "https://the-cage-sshop-800ff767dfb9.herokuapp.com",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",

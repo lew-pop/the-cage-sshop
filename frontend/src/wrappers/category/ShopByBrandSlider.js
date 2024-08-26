@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import Swiper, { SwiperSlide } from "../../components/swiper";
-import categoryData from "../../data/category/category-four.json";
+import categoryData from "../../data/category/shop-by-brand.json";
 import CategoryFourSingle from "../../components/category/CategoryFourSingle.js";
 import SectionTitle from "../../components/section-title/SectionTitle.js";
 
@@ -27,7 +27,7 @@ const CategoryfourSlider = ({ spaceTopClass, spaceBottomClass }) => {
     <div className={clsx("collections-area", spaceTopClass, spaceBottomClass)}>
       <div className="container">
         <SectionTitle
-          titleText="Shop By Category"
+          titleText="Shop By Brand"
           positionClass="text-center"
           spaceClass="mb-55"
           borderClass=""

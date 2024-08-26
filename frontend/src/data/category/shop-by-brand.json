@@ -1,0 +1,51 @@
+[
+    {
+        "id": "1",
+        "image": "/assets/img/slider/brands/CandyKing.png",
+        "subtitle": "287 Products",
+        "title": "Candy King",
+        "link": "/shop-filtered-grid/disposable"
+    },
+    {
+        "id": "2",
+        "image": "/assets/img/slider/brands/AirFactory.png",
+        "subtitle": "65 Products",
+        "title": "Air Factory",
+        "link": "/shop-filtered-grid/primeBar"
+    },
+    {
+        "id": "3",
+        "image": "/assets/img/slider/brands/CandyKing.png",
+        "subtitle": "11 Products",
+        "title": "Coastal Clouds",
+        "link": "/shop-filtered-grid/salt-nic"
+    },
+    {
+        "id": "4",
+        "image": "/assets/img/slider/brands/CandyKing.png",
+        "subtitle": "62 Products",
+        "title": "Daze",
+        "link": "/shop-filtered-grid/lostmary"
+    },
+    {
+        "id": "5",
+        "image": "/assets/img/slider/brands/CandyKing.png",
+        "subtitle": "67 Products",
+        "title": "EB Create",
+        "link": "/shop-filtered-grid/flum"
+    },
+    {
+        "id": "6",
+        "image": "/assets/img/slider/brands/CandyKing.png",
+        "subtitle": "9 Products",
+        "title": "Flum",
+        "link": "/shop-brand-grid/bugatti"
+    },
+    {
+        "id": "7",
+        "image": "/assets/img/slider/brands/CandyKing.png",
+        "subtitle": "5 Products",
+        "title": "FreeMax",
+        "link": "/shop-filtered-grid/rolling-papers"
+    }
+]

@@ -1,24 +1,24 @@
 [
   {
     "id": "1",
-    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/disposables-cloud.png",
-    "subtitle": "287 Products",
-    "title": "Disposables",
-    "link": "/shop-filtered-grid/disposable"
-  },
-  {
-    "id": "2",
     "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/e-liquids.png",
     "subtitle": "65 Products",
     "title": "E-Liquids",
     "link": "/shop-filtered-grid/primeBar"
   },
   {
-    "id": "3",
+    "id": "2",
     "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/salt-nic.png",
     "subtitle": "11 Products",
     "title": "Salt Nic",
     "link": "/shop-filtered-grid/salt-nic"
+  },
+  {
+    "id": "3",
+    "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/disposables-cloud.png",
+    "subtitle": "287 Products",
+    "title": "Disposables",
+    "link": "/shop-filtered-grid/disposable"
   },
   {
     "id": "4",
