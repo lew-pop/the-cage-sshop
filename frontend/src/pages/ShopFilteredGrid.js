@@ -16,9 +16,9 @@ import { store } from "../store/store";
 
 const ShopFilteredGrid = () => {
   let { id } = useParams();
-  const { data, isLoading, error } = useListProductsQuery();
-  store.dispatch(setProducts(data));
-  console.log("Data: ", data);
+  const { data: products, error, isLoading } = useListProductsQuery();
+  store.dispatch(setProducts(products));
+ 
   const [layout, setLayout] = useState("grid three-column");
   const [sortType, setSortType] = useState("category");
   const [sortValue, setSortValue] = useState(id);
@@ -29,7 +29,6 @@ const ShopFilteredGrid = () => {
   const [currentData, setCurrentData] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
 
-  const { products } = useSelector((state) => state.product);
   console.log("Products: ", products);
   const pageLimit = 15;
   let { pathname } = useLocation();
