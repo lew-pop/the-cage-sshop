@@ -1,6 +1,6 @@
-import { api } from "./api";
+import { cageApi } from "./cageApi";
 
-export const userApi = api.injectEndpoints({
+export const userApi = cageApi.injectEndpoints({
   endpoints: (builder) => ({
     // User endpoints
     confirmEmail: builder.query({
@@ -22,31 +22,31 @@ export const userApi = api.injectEndpoints({
       })
     }),
     getUserDetails: builder.query({
-      query: (id) => `/users/${id}/`,
+      query: (id) => `users/${id}/`,
       providesTags: (result, error, id) => [{ type: 'User', id }],
     }),
     updateUserProfile: builder.mutation({
       query: (user) => ({
-        url: '/users/profile/update/',
+        url: 'users/profile/update/',
         method: 'PUT',
         body: user,
       }),
       invalidatesTags: (result, error, user) => [{ type: 'User', id: user._id }],
     }),
     listUsers: builder.query({
-      query: () => '/users/',
+      query: () => 'users/',
       providesTags: ['User'],
     }),
     deleteUser: builder.mutation({
       query: (id) => ({
-        url: `/users/delete/${id}/`,
+        url: `users/delete/${id}/`,
         method: 'DELETE',
       }),
       invalidatesTags: ['User'],
     }),
     updateUser: builder.mutation({
       query: (user) => ({
-        url: `/users/update/${user._id}/`,
+        url: `users/update/${user._id}/`,
         method: 'PUT',
         body: user,
       }),

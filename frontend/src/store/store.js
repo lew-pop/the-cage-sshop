@@ -1,5 +1,5 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { api } from "./services/api";
+import { cageApi } from "./services/cageApi";
 
 import {
   persistStore,
@@ -23,7 +23,7 @@ const persistConfig = {
   key: "cage",
   version: 1.1,
   storage,
-  blacklist: ["product", api.reducerPath],
+  blacklist: ["product", cageApi.reducerPath],
 };
 
 export const rootReducer = combineReducers({
@@ -33,7 +33,7 @@ export const rootReducer = combineReducers({
   compare: compareReducer,
   wishlist: wishlistReducer,
   userLogin: userReducer,
-  [api.reducerPath]: api.reducer,
+  [cageApi.reducerPath]: cageApi.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -45,6 +45,6 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(api.middleware),
+    }).concat(cageApi.middleware),
 });
 export const persistor = persistStore(store);

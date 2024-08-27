@@ -2,7 +2,10 @@ import { Fragment, useState, useEffect } from "react";
 import Paginator from "react-hooks-paginator";
 import { useSelector } from "react-redux";
 import { useParams, useLocation } from "react-router-dom";
-import { useListProductsByCategoryQuery, useListProductsByTagQuery } from "../store/services/product";
+import {
+  useListProductsByCategoryQuery,
+  useListProductsByTagQuery,
+} from "../store/services/product";
 import { getSortedProducts } from "../helpers/product";
 import SEO from "../components/seo";
 import LayoutOne from "../layouts/LayoutOne";
@@ -10,29 +13,13 @@ import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import ShopSidebar from "../wrappers/product/ShopSidebar";
 import ShopTopbar from "../wrappers/product/ShopTopbar";
 import ShopProducts from "../wrappers/product/ShopProducts";
+import { useGetProductsQuery } from "../store/services/product";
 
 const ShopFilteredGrid = () => {
   let { pathname } = useLocation();
   let { id } = useParams();
-  const [sortType, setSortType] = useState("category");
-  const [sortValue, setSortValue] = useState(id);
-  
-  const { data, isLoading, error } = useListProductsByTagQuery(id);
-  const [layout, setLayout] = useState("grid three-column");
-  
-  const getSortParams = (sortType, sortValue) => {
-    setSortType(sortType);
-    setSortValue(sortValue);
-  };
+  const { data, error, isLoading } = useGetProductsQuery(id, { refetchOnMountOrArgChange: true });
 
-  console.log("Data: ", data);
-  const pageLimit = 15;
-
-  const getLayout = (layout) => {
-    setLayout(layout);
-  };
-
- 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   return (
@@ -58,7 +45,6 @@ const ShopFilteredGrid = () => {
               <div className="col-lg-3 order-2 order-lg-1">
                 {/* shop sidebar */}
                 <ShopSidebar
-                 
                   getSortParams={getSortParams}
                   sideSpaceClass="mr-30"
                 />

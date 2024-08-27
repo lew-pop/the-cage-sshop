@@ -49,19 +49,19 @@ const RelatedProductSlider = ({ spaceBottomClass }) => {
         {data?.length ? (
           <Swiper options={settings}>
             {data.map((product) => (
-              <SwiperSlide key={product.id}>
+              <SwiperSlide key={product._id}>
                 <ProductGridSingle
-                  key={product.id}
+                  key={product._id}
                   product={product}
                   currency={currency}
                   cartItem={cartItems.find(
-                    (cartItem) => cartItem.id === product.id
+                    (cartItem) => cartItem.id === product._id
                   )}
                   wishlistItem={wishlistItems.find(
-                    (wishlistItem) => wishlistItem.id === product.id
+                    (wishlistItem) => wishlistItem.id === product._id
                   )}
                   compareItem={compareItems.find(
-                    (compareItem) => compareItem.id === product.id
+                    (compareItem) => compareItem.id === product._id
                   )}
                 />
               </SwiperSlide>

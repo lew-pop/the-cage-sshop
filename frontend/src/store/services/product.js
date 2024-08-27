@@ -1,38 +1,42 @@
-import { api } from "./api";
+import { cageApi } from "./cageApi";
 
-export const productApi = api.injectEndpoints({
+export const productApi = cageApi.injectEndpoints({
   endpoints: (builder) => ({
     // Product endpoints
     listProducts: builder.query({
-      query: () =>  "/products/",
+      query: () =>  `products/`,
       providesTags: ["Product"],
     }),
     listProductsByCategory: builder.query({
-      query: (category) => `/products/category/${category}/`,
+      query: (category) => `products/category/${category}/`,
       providesTags: ["Product"],
     }),
     listProductsByTag: builder.query({
-      query: (id) => `/products/tag/${id}/`,
+      query: (id) => `products/tag/${id}/`,
       providesTags: ["Product"],
     }),
     listTopProducts: builder.query({
-      query: () => "/products/top/",
+      query: () => "products/top/",
       providesTags: ["Product"],
     }),
     getProduct: builder.query({
-      query: (id) => `/products/${id}/`, // Replace with your actual API endpoint
+      query: (id) => `products/${id}/`, // Replace with your actual API endpoint
       providesTags: (result, error, id) => [{ type: 'Product', id }],
+    }),
+    getProducts: builder.query({
+      query: (query) =>  `products/query/${query}`,
+      providesTags: ["Product"],
     }),
     deleteProduct: builder.mutation({
       query: (id) => ({
-        url: `/products/delete/${id}/`,
+        url: `products/delete/${id}/`,
         method: 'DELETE',
       }),
       invalidatesTags: ["Product"],
     }),
     createProduct: builder.mutation({
       query: () => ({
-        url: `/products/create/`,
+        url: `products/create/`,
         method: 'POST',
         body: {},
       }),
@@ -40,7 +44,7 @@ export const productApi = api.injectEndpoints({
     }),
     updateProduct: builder.mutation({
       query: (product) => ({
-        url: `/products/update/${product.id}/`,
+        url: `products/update/${product.id}/`,
         method: 'PUT',
         body: product,
       }),
@@ -48,7 +52,7 @@ export const productApi = api.injectEndpoints({
     }),
     createProductReview: builder.mutation({
       query: ({ productId, review }) => ({
-        url: `/products/${productId}/reviews/`,
+        url: `products/${productId}/reviews/`,
         method: 'POST',
         body: review,
       }),
@@ -63,6 +67,7 @@ export const {
   useListProductsByTagQuery,
   useListTopProductsQuery,
   useGetProductQuery,
+  useGetProductsQuery,
   useDeleteProductMutation,
   useCreateProductMutation,
   useUpdateProductMutation,

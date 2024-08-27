@@ -11,7 +11,7 @@ const ProductImageDescription = ({ spaceTopClass, spaceBottomClass, galleryType,
   const currency = useSelector((state) => state.currency);
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
-  const wishlistItem = wishlistItems.find(item => item.id === product.id);
+  const wishlistItem = wishlistItems.find(item => item.id === product._id);
   const discountedPrice = getDiscountPrice(product.price, product.discount);
   const finalProductPrice = +(product.price * currency.currencyRate).toFixed(2);
   const finalDiscountedPrice = +(

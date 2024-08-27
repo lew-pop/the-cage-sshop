@@ -16,9 +16,9 @@ import { store } from "../store/store";
 
 const ShopFilteredGrid = () => {
   let { id } = useParams();
-  const { data: products, error, isLoading } = useListProductsQuery();
-  store.dispatch(setProducts(products));
- 
+  const { data, error, isLoading } = useListProductsQuery({refetchOnMountOrArgChange: true});
+  store.dispatch(setProducts(data));
+  const { products } = useSelector((state) => state.product);
   const [layout, setLayout] = useState("grid three-column");
   const [sortType, setSortType] = useState("category");
   const [sortValue, setSortValue] = useState(id);
@@ -28,8 +28,8 @@ const ShopFilteredGrid = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentData, setCurrentData] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
-
-  console.log("Products: ", products);
+  
+  
   const pageLimit = 15;
   let { pathname } = useLocation();
 
@@ -58,6 +58,7 @@ const ShopFilteredGrid = () => {
     setSortedProducts(sortedProducts);
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
   }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   return (
