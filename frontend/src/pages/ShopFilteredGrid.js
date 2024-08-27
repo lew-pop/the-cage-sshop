@@ -10,14 +10,16 @@ import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import ShopSidebar from "../wrappers/product/ShopSidebar";
 import ShopTopbar from "../wrappers/product/ShopTopbar";
 import ShopProducts from "../wrappers/product/ShopProducts";
+import { useListProductsQuery } from "../store/services/product";
+import { setProducts } from "../store/slices/product-slice";
+import { store } from "../store/store";
 
 const ShopFilteredGrid = () => {
-  let { pathname } = useLocation();
   let { id } = useParams();
-  console.log("id: ", id);
-  const { data, isLoading, error } = useListProductsByTagQuery(id);
+  const { data } = useListProductsQuery();
+  store.dispatch(setProducts(data));
   const [layout, setLayout] = useState("grid three-column");
-  const [sortType, setSortType] = useState("tag");
+  const [sortType, setSortType] = useState("category");
   const [sortValue, setSortValue] = useState(id);
   const [filterSortType, setFilterSortType] = useState("");
   const [filterSortValue, setFilterSortValue] = useState("");
@@ -25,10 +27,11 @@ const ShopFilteredGrid = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentData, setCurrentData] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
+
   const { products } = useSelector((state) => state.product);
 
-  console.log("Data: ", data);
   const pageLimit = 15;
+  let { pathname } = useLocation();
 
   const getLayout = (layout) => {
     setLayout(layout);
@@ -54,17 +57,8 @@ const ShopFilteredGrid = () => {
     sortedProducts = filterSortedProducts;
     setSortedProducts(sortedProducts);
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
-  }, [
-    offset,
-    products,
-    sortType,
-    sortValue,
-    filterSortType,
-    filterSortValue,
-    id,
-  ]);
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
+  
   return (
     <Fragment>
       <SEO
@@ -79,7 +73,7 @@ const ShopFilteredGrid = () => {
             { label: "Home", path: process.env.PUBLIC_URL + "/" },
             { label: "Shop", path: process.env.PUBLIC_URL + pathname },
           ]}
-          backgroundImage="https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/breadcrumb-light.png"
+          backgroundImage="/assets/img/bg/breadcrumb.png"
         />
 
         <div className="shop-area pt-95 pb-100">
@@ -103,12 +97,12 @@ const ShopFilteredGrid = () => {
                 />
 
                 {/* shop page content default */}
-                <ShopProducts layout={layout} products={data} />
+                <ShopProducts layout={layout} products={currentData} />
 
                 {/* shop product pagination */}
                 <div className="pro-pagination-style text-center mt-30">
                   <Paginator
-                    totalRecords={data.length}
+                    totalRecords={sortedProducts.length}
                     pageLimit={pageLimit}
                     pageNeighbours={2}
                     setOffset={setOffset}

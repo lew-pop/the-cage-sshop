@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import {
-  getIndividualBrands,
   getIndividualCategories,
   getIndividualTags,
   getIndividualColors,
@@ -9,15 +8,12 @@ import {
 } from "../../helpers/product";
 import ShopSearch from "../../components/product/ShopSearch";
 import ShopCategories from "../../components/product/ShopCategories";
-import ShopColor from "../../components/product/ShopColor";
-import ShopSize from "../../components/product/ShopSize";
 import ShopTag from "../../components/product/ShopTag";
-import ShopBrand from "../../components/product/ShopBrand";
+
 
 const ShopSidebar = ({ products, getSortParams, sideSpaceClass }) => {
   const uniqueCategories = getIndividualCategories(products);
   const uniqueTags = getIndividualTags(products);
-  
 
   return (
     <div className={clsx("sidebar-style", sideSpaceClass)}>
@@ -31,8 +27,7 @@ const ShopSidebar = ({ products, getSortParams, sideSpaceClass }) => {
       />
 
       {/* filter by tag */}
-      <ShopTag tags={uniqueTags} getSortParams={getSortParams} />     
-
+      <ShopTag tags={uniqueTags} getSortParams={getSortParams} />
     </div>
   );
 };

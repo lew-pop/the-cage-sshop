@@ -36,7 +36,7 @@ def getProductsByCategory(request, pk):
 
 @api_view(['GET'])
 def getProductsByTag(request, pk):
-    products = Product.objects.filter(tag__contains=[pk])
+    products = Product.objects.filter(tag__icontains=pk)
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)
 

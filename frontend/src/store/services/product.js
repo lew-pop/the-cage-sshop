@@ -19,7 +19,7 @@ export const productApi = api.injectEndpoints({
       query: () => "/products/top/",
       providesTags: ["Product"],
     }),
-     getProduct: builder.query({
+    getProduct: builder.query({
       query: (id) => `/products/${id}/`, // Replace with your actual API endpoint
       providesTags: (result, error, id) => [{ type: 'Product', id }],
     }),

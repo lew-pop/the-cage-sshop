@@ -15,12 +15,9 @@ import { store } from "../store/store";
 
 const Home = () => {
   const { data } = useListProductsQuery();
-  console.log("Products from RTK Query:", data);
-
   store.dispatch(setProducts(data));
   const { products } = useSelector((state) => state.product);
-  console.log("Products from State:", products);
-  
+    
   return (
     <Fragment>
       <SEO
