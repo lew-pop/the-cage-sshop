@@ -18,6 +18,7 @@ const ShopFilteredGrid = () => {
   let { id } = useParams();
   const { data } = useListProductsQuery();
   store.dispatch(setProducts(data));
+  console.log("Data: ", data);
   const [layout, setLayout] = useState("grid three-column");
   const [sortType, setSortType] = useState("category");
   const [sortValue, setSortValue] = useState(id);
@@ -29,7 +30,7 @@ const ShopFilteredGrid = () => {
   const [sortedProducts, setSortedProducts] = useState([]);
 
   const { products } = useSelector((state) => state.product);
-
+  console.log("Products: ", products);
   const pageLimit = 15;
   let { pathname } = useLocation();
 

@@ -49,7 +49,7 @@ const ProductGridTwelve = ({
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
-  console.log("ProductGridTwelve: ", data)
+  
   return (
     <Slider sliderOptions={settings}>
       {data &&

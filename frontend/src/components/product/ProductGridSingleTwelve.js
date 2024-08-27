@@ -25,13 +25,13 @@ const ProductGridSingleTwelve = ({
   ).toFixed(2);
   const dispatch = useDispatch();
 
-  console.log("ProdGSingleTwelve: ", product);
+  
   return (
     <Fragment>
       <div className={clsx("product-wrap-2", spaceBottomClass, colorClass)}>
         <div className="product-title"></div>
         <div className="product-img">
-          <Link to={process.env.PUBLIC_URL + "/product/" + product._id}>
+          <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
             <img className="default-img" src={product.image[0]} alt="" />
             {product.image.length > 1 ? (
               <img className="hover-img" src={product.image[1]} alt="" />
@@ -65,7 +65,7 @@ const ProductGridSingleTwelve = ({
               </a>
             ) : product.variation && product.variation.length >= 1 ? (
               <Link
-                to={`${process.env.PUBLIC_URL}/product/${product._id}`}
+                to={`${process.env.PUBLIC_URL}/product/${product.id}`}
                 title="Select options"
               >
                 <i className="fa fa-cog"></i>
@@ -102,7 +102,7 @@ const ProductGridSingleTwelve = ({
             }`}
           >
             <h3>
-              <Link to={process.env.PUBLIC_URL + "/product/" + product._id}>
+              <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
                 {product.name}
               </Link>
             </h3>
