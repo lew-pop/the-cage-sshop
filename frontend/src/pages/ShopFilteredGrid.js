@@ -16,7 +16,7 @@ import { store } from "../store/store";
 
 const ShopFilteredGrid = () => {
   let { id } = useParams();
-  const { data } = useListProductsQuery();
+  const { data, isLoading, error } = useListProductsQuery();
   store.dispatch(setProducts(data));
   console.log("Data: ", data);
   const [layout, setLayout] = useState("grid three-column");
@@ -59,7 +59,8 @@ const ShopFilteredGrid = () => {
     setSortedProducts(sortedProducts);
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
   }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
-  
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
   return (
     <Fragment>
       <SEO

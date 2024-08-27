@@ -14,10 +14,7 @@ import { setProducts } from "../store/slices/product-slice"
 import { store } from "../store/store";
 
 const Home = () => {
-  const { data } = useListProductsQuery();
-  store.dispatch(setProducts(data));
-  const { products } = useSelector((state) => state.product);
-    
+      
   return (
     <Fragment>
       <SEO
