@@ -13,12 +13,14 @@ import ShopProducts from "../wrappers/product/ShopProducts";
 import { useListProductsQuery } from "../store/services/product";
 import { setProducts } from "../store/slices/product-slice";
 import { store } from "../store/store";
+import { cageApi } from "../store/services/cageApi";
 
 const ShopFilteredGrid = () => {
   let { id } = useParams();
-  const { data, error, isLoading } = useListProductsQuery({refetchOnMountOrArgChange: true});
+  //const [trigger, result, lastPromiseInfo] = cageApi.endpoints.listProducts.useLazyQuery();
+  const { data, error, isLoading } = useListProductsQuery();
   store.dispatch(setProducts(data));
-  const { products } = useSelector((state) => state.product);
+  
   const [layout, setLayout] = useState("grid three-column");
   const [sortType, setSortType] = useState("category");
   const [sortValue, setSortValue] = useState(id);
@@ -28,7 +30,7 @@ const ShopFilteredGrid = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentData, setCurrentData] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
-  
+  const { products } = useSelector((state) => state.product);
   
   const pageLimit = 15;
   let { pathname } = useLocation();

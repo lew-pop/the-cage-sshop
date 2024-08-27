@@ -18,6 +18,5 @@ export const cageApi = createApi({
   reducerPath: 'cageApi',
   baseQuery: cageBaseQuery,
   tagTypes: ["User", "Product", "Order"],
-
   endpoints: () => ({}),
 });

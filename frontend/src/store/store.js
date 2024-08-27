@@ -23,7 +23,7 @@ const persistConfig = {
   key: "cage",
   version: 1.1,
   storage,
-  blacklist: ["product", cageApi.reducerPath],
+  blacklist: ["product"],
 };
 
 export const rootReducer = combineReducers({

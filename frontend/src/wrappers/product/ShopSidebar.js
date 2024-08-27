@@ -14,12 +14,10 @@ import { useListProductsQuery } from "../../store/services/product";
 import { setProducts } from "../../store/slices/product-slice";
 import { store } from "../../store/store";
 
-const ShopSidebar = ({  products, getSortParams, sideSpaceClass }) => {
- 
+const ShopSidebar = ({ products, getSortParams, sideSpaceClass }) => {
   const uniqueCategories = getIndividualCategories(products);
   const uniqueTags = getIndividualTags(products);
-  
-  
+
   return (
     <div className={clsx("sidebar-style", sideSpaceClass)}>
       {/* shop search */}
