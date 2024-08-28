@@ -1,5 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { cageApi } from "./services/cageApi";
+import { apiSlice } from "./api/apiSlice";
+import { createLogger } from 'redux-logger';
 
 import {
   persistStore,
@@ -23,7 +24,7 @@ const persistConfig = {
   key: "cage",
   version: 1.1,
   storage,
-  blacklist: ["product"],
+  blacklist: ["product", apiSlice.reducerPath],
 };
 
 export const rootReducer = combineReducers({
@@ -33,10 +34,12 @@ export const rootReducer = combineReducers({
   compare: compareReducer,
   wishlist: wishlistReducer,
   userLogin: userReducer,
-  [cageApi.reducerPath]: cageApi.reducer,
+  [apiSlice.reducerPath]: apiSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+const logger = createLogger();
 
 export const store = configureStore({
   reducer: persistedReducer,
@@ -45,6 +48,7 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(cageApi.middleware),
+    }).concat(apiSlice.middleware, logger),
 });
+
 export const persistor = persistStore(store);

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Swiper, { SwiperSlide } from "../../components/swiper";
 import SectionTitle from "../../components/section-title/SectionTitle";
 import ProductGridSingle from "../../components/product/ProductGridSingle";
-import { useListTopProductsQuery } from "../../store/services/product";
+import { useListTopProductsQuery } from "../../store/api/product";
 
 const settings = {
   loop: false,

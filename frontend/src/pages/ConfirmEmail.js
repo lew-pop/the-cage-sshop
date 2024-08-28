@@ -6,7 +6,7 @@ import Message from "../components/util/Message";
 import SEO from "../components/seo";
 import LayoutOne from "../layouts/LayoutOne";
 import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
-import { useConfirmEmailQuery } from "../store/services/user";
+import { useConfirmEmailQuery } from "../store/api/user";
 
 const ConfirmEmail = () => {
   const { pathname } = useLocation();

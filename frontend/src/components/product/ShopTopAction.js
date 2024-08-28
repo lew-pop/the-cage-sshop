@@ -8,6 +8,7 @@ const ShopTopAction = ({
   productCount,
   sortedProductCount
 }) => {
+  
   return (
     <div className="shop-top-bar mb-35">
       <div className="select-shoing-wrap">

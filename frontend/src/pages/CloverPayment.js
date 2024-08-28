@@ -11,7 +11,7 @@ import {
   usePayOrderMutation,
   useDeliverOrderMutation,
   
-} from "../store/services/order";
+} from "../store/api/order";
 
 
 const CloverPayment = () => {

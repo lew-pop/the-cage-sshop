@@ -6,7 +6,7 @@ import LayoutOne from "../layouts/LayoutOne";
 import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import RelatedProductSlider from "../wrappers/product/RelatedProductSlider";
 import ProductImageDescription from "../wrappers/product/ProductImageDescription";
-import { useGetProductQuery } from '../store/services/product'
+import { useGetProductQuery } from '../store/api/product'
 /*import Loader from "../components/util/Loader";
 import Message from "../components/util/Message";*/
 

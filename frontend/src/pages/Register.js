@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useRegisterUserMutation } from "../store/services/user";
+import { useRegisterUserMutation } from "../store/api/user";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserInfo } from "../store/slices/user-slice";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";

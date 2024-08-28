@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import Slider from '../../components/slider/Slider';
 import { SwiperSlide } from 'swiper/react';
-import { useListProductsByCategoryQuery } from "../../store/services/product";
+import { useListProductsByCategoryQuery } from "../../store/api/product";
 import ProductGridSingleTwelve from "../../components/product/ProductGridSingleTwelve";
 
 
@@ -38,7 +38,7 @@ const ProductGridTwelve = ({
   limit,
 }) => {
   const { data, isLoading, error } = useListProductsByCategoryQuery(category);
- 
+  console.log("Data: ", data);
   const currency = useSelector((state) => state.currency);
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);

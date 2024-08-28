@@ -10,9 +10,6 @@ import {
 import ShopSearch from "../../components/product/ShopSearch";
 import ShopCategories from "../../components/product/ShopCategories";
 import ShopTag from "../../components/product/ShopTag";
-import { useListProductsQuery } from "../../store/services/product";
-import { setProducts } from "../../store/slices/product-slice";
-import { store } from "../../store/store";
 
 const ShopSidebar = ({ products, getSortParams, sideSpaceClass }) => {
   const uniqueCategories = getIndividualCategories(products);

@@ -2,33 +2,54 @@ import { Fragment, useState, useEffect } from "react";
 import Paginator from "react-hooks-paginator";
 import { useSelector } from "react-redux";
 import { useParams, useLocation } from "react-router-dom";
-import {
-  useListProductsByCategoryQuery,
-  useListProductsByTagQuery,
-} from "../store/services/product";
-import { getSortedProducts } from "../helpers/product";
 import SEO from "../components/seo";
 import LayoutOne from "../layouts/LayoutOne";
 import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import ShopSidebar from "../wrappers/product/ShopSidebar";
 import ShopTopbar from "../wrappers/product/ShopTopbar";
 import ShopProducts from "../wrappers/product/ShopProducts";
-import { useGetProductsQuery } from "../store/services/product";
+import Loader from "../components/util/Loader";
+import Message from "../components/util/Message";
+import { useListProductsByTagQuery } from "../store/api/product";
 
-const ShopFilteredGrid = () => {
-  let { pathname } = useLocation();
+const ShopCatalog = () => {
   let { id } = useParams();
-  const { data, error, isLoading } = useGetProductsQuery(id, { refetchOnMountOrArgChange: true });
+  const [layout, setLayout] = useState("grid three-column");
+  const [sortType, setSortType] = useState("category");
+  const [sortValue, setSortValue] = useState(id);
+  const [offset, setOffset] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sortedCount, setSortedCount] = useState(0);
+  const [productCount, setProductCount] = useState(0);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  const { data, isLoading, isError, error } = useListProductsByTagQuery(id);
+  console.log("Sorted Products: ", data);
+  
+  const { products } = useSelector((state) => state.product);
+  let { pathname } = useLocation();
+  const getLayout = (layout) => {
+    setLayout(layout);
+  };
+  const getSortParams = (sortType, sortValue) => {
+    setSortType(sortType);
+    setSortValue(sortValue);
+  };  
+  useEffect(() => {
+    if (data) {
+      setSortedCount(data.length);
+    }
+    if (products) {
+      setProductCount(products.length);
+    }
+  }, [data, isLoading, error]);
+
+  console.log("Count: ", products);
   return (
     <Fragment>
       <SEO
         titleTemplate="The Cage Product Catalog"
         description="The Cage SShop Product Catalog."
       />
-
       <LayoutOne headerTop="visible">
         {/* breadcrumb */}
         <Breadcrumb
@@ -45,6 +66,7 @@ const ShopFilteredGrid = () => {
               <div className="col-lg-3 order-2 order-lg-1">
                 {/* shop sidebar */}
                 <ShopSidebar
+                  products={products}
                   getSortParams={getSortParams}
                   sideSpaceClass="mr-30"
                 />
@@ -53,19 +75,24 @@ const ShopFilteredGrid = () => {
                 {/* shop topbar default */}
                 <ShopTopbar
                   getLayout={getLayout}
-                  getFilterSortParams={getFilterSortParams}
-                  productCount={products.length}
-                  sortedProductCount={currentData.length}
+                  getFilterSortParams={getSortParams}
+                  productCount={productCount}
+                  sortedProductCount={sortedCount}
                 />
-
+                {isError && (
+                  <Message variant="danger">
+                    {error?.data?.detail || error.error}
+                  </Message>
+                )}
+                {isLoading && <Loader />}
                 {/* shop page content default */}
                 <ShopProducts layout={layout} products={data} />
 
                 {/* shop product pagination */}
                 <div className="pro-pagination-style text-center mt-30">
                   <Paginator
-                    totalRecords={data.length}
-                    pageLimit={pageLimit}
+                    totalRecords={productCount}
+                    pageLimit={15}
                     pageNeighbours={2}
                     setOffset={setOffset}
                     currentPage={currentPage}
@@ -84,4 +111,4 @@ const ShopFilteredGrid = () => {
   );
 };
 
-export default ShopFilteredGrid;
+export default ShopCatalog;

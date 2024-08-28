@@ -2,7 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 import Paginator from "react-hooks-paginator";
 import { useSelector } from "react-redux";
 import { useParams, useLocation } from "react-router-dom";
-import { useListProductsByTagQuery } from "../store/services/product";
+import { useListProductsByTagQuery } from "../store/api/product";
 import { getSortedProducts } from "../helpers/product";
 import SEO from "../components/seo";
 import LayoutOne from "../layouts/LayoutOne";
@@ -10,10 +10,10 @@ import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import ShopSidebar from "../wrappers/product/ShopSidebar";
 import ShopTopbar from "../wrappers/product/ShopTopbar";
 import ShopProducts from "../wrappers/product/ShopProducts";
-import { useListProductsQuery } from "../store/services/product";
+import { useListProductsQuery } from "../store/api/product";
 import { setProducts } from "../store/slices/product-slice";
 import { store } from "../store/store";
-import { cageApi } from "../store/services/cageApi";
+import { apiSlice } from "../store/api/apiSlice";
 
 const ShopFilteredGrid = () => {
   let { id } = useParams();
@@ -77,7 +77,7 @@ const ShopFilteredGrid = () => {
             { label: "Home", path: process.env.PUBLIC_URL + "/" },
             { label: "Shop", path: process.env.PUBLIC_URL + pathname },
           ]}
-          backgroundImage="/assets/img/bg/breadcrumb.png"
+          backgroundImage="https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/breadcrumb-light.png"
         />
 
         <div className="shop-area pt-95 pb-100">

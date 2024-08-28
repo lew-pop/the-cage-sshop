@@ -39,57 +39,57 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/geekBar"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/geekBar"}>
                       {t("Geek Bar")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/lostMary"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/lostMary"}>
                       {t("Lost Mary")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/primeBar"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/primeBar"}>
                       {t("Prime Bar")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/funkyLands"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/funkyLands"}>
                       {t("Funky Lands")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/breeze"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/breeze"}>
                       {t("Breeze Smoke")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/elfBar"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/elfBar"}>
                       {t("Elf Bar")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/plena"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/plena"}>
                       {t("Plena 18k")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/flum"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/flum"}>
                       {t("Flum")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/elux"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/elux"}>
                       {t("Elux")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/hyppe"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/hyppe"}>
                       {t("Hyppe")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/bugatti"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/bugatti"}>
                       {t("Bugatti")}
                     </Link>
                   </li>
@@ -98,64 +98,64 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
               <li>
                 <ul>
                   <li className="mega-menu-title">
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/disposables"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/disposables"}>
                       {t("Vape Flavors")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/exotic"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/exotic"}>
                       {t("Exotic")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/sweet"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/sweet"}>
                       {t("Sweet")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/fruity"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/fruity"}>
                       {t("Fruity")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/tobacco"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/tobacco"}>
                       {t("Tobacco")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/dessert"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/dessert"}>
                       {t("Dessert")}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to={process.env.PUBLIC_URL + "/shop-filtered-grid/citrus"}
+                      to={process.env.PUBLIC_URL + "/shop-catalog/citrus"}
                     >
                       {t("Citrus")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/mint"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/mint"}>
                       {t("Mint")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/candy"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/candy"}>
                       {t("Candy")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/sweetIce"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/sweetIce"}>
                       {t("Sweet Ice")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/sweetCitrus"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/sweetCitrus"}>
                       {t("Sweet Citrus")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/fruityIce"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/fruityIce"}>
                       {t("Fruity Ice")}
                     </Link>
                   </li>
@@ -170,50 +170,50 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/geekVape"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/geekVape"}>
                       {t("Geek Vape")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/smok"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/smok"}>
                       {t("Smok")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/vaporesso"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/vaporesso"}>
                       {t("Vaporesso")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/voopoo"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/voopoo"}>
                       {t("VooPoo")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/freemax"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/freemax"}>
                       {t("FreeMax")}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to={process.env.PUBLIC_URL + "/shop-filtered-grid/lostVape"}
+                      to={process.env.PUBLIC_URL + "/shop-catalog/lostVape"}
                     >
                       {t("Lost Vape")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/uwell"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/uwell"}>
                       {t("UWELL")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/sourin"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/sourin"}>
                       {t("Suorin")}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to={process.env.PUBLIC_URL + "/shop-filtered-grid/miPod"}
+                      to={process.env.PUBLIC_URL + "/shop-catalog/miPod"}
                     >
                       {t("Mi-Pod")}
                     </Link>
@@ -224,7 +224,7 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
             </ul>
           </li>
           <li>
-            <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/eliquid"}>
+            <Link to={process.env.PUBLIC_URL + "/shop-catalog/eliquid"}>
               {" "}
               {t("E-Liquid")}
               {sidebarMenu ? (
@@ -239,64 +239,64 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
               <li>
                 <ul>
                   <li className="mega-menu-title">
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/miPod"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/miPod"}>
                       {t("E-Liquid")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/vapetasia"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/vapetasia"}>
                       {t("Vapetasia")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/podJuice"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/podJuice"}>
                       {t("Pod Juice")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/candyKings"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/candyKings"}>
                       {t("Candy Kings")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/cloudNerdz"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/cloudNerdz"}>
                       {t("Cloud Nurdz Iced")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/juiceHead"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/juiceHead"}>
                       {t("Juice Head")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/coastalClouds"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/coastalClouds"}>
                       {t("Coastal Clouds")}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to={process.env.PUBLIC_URL + "/shop-filtered-grid/orgnx"}
+                      to={process.env.PUBLIC_URL + "/shop-catalog/orgnx"}
                     >
                       {t("Orgnx")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/daze"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/daze"}>
                       {t("Reds & Daze")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/naked"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/naked"}>
                       {t("Naked 100")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/twist"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/twist"}>
                       {t("Twist")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/humble"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/humble"}>
                       {t("Humble")}
                     </Link>
                   </li>
@@ -310,54 +310,54 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/dazeSalt"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/dazeSalt"}>
                       {t("Daze Salt Series")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/airFactory"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/airFactory"}>
                       {t("Air Factory")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/vapetasiaSalts"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/vapetasiaSalts"}>
                       {t("Vapetasia Salts")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/saltNkd"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/saltNkd"}>
                       {t("Salt Nkd 100")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/podJuice"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/podJuice"}>
                       {t("Pod Juice")}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to={process.env.PUBLIC_URL + "/shop-filtered-grid/orgnxSalt"}
+                      to={process.env.PUBLIC_URL + "/shop-catalog/orgnxSalt"}
                     >
                       {t("Orgnx Salt Nic")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/juiceHeadSalts"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/juiceHeadSalts"}>
                       {t("Juice Head Salts")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/cloudNurdzSalts"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/cloudNurdzSalts"}>
                       {t("Cloud Nurdz Salts")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/ccloudSalt"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/ccloudSalt"}>
                       {t("Coastal Clouds")}
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/twistSalt"}>
+                    <Link to={process.env.PUBLIC_URL + "/shop-catalog/twistSalt"}>
                       {t("Twist Nicotine Salt")}
                     </Link>
                   </li>
@@ -382,7 +382,7 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
           </li>
           
           <li>
-            <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/smoke"}>
+            <Link to={process.env.PUBLIC_URL + "/shop-catalog/smoke"}>
               {t("Smoke")}
               {sidebarMenu ? (
                 <span>
@@ -394,37 +394,37 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
             </Link>
             <ul className="submenu">
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/vaporizers"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/vaporizers"}>
                   {t("Vaporizers")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/dabRigs"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/dabRigs"}>
                   {t("Dab Rigs")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/handPipes"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/handPipes"}>
                   {t("Hand Pipes")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/waterPipes"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/waterPipes"}>
                   {t("Water Pipes")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/custom"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/custom"}>
                   {t("Custom Glass")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/rollPapers"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/rollPapers"}>
                   {t("Rolling Papers")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/hookahs"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/hookahs"}>
                   {t("Hookahs")}
                 </Link>
               </li>
@@ -432,7 +432,7 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
             </ul>
           </li>
           <li>
-            <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/accessories"}>
+            <Link to={process.env.PUBLIC_URL + "/shop-catalog/accessories"}>
               {t("Accessories")}
               {sidebarMenu ? (
                 <span>
@@ -444,22 +444,22 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
             </Link>
             <ul className="submenu">
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/grinder"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/grinder"}>
                   {t("Grinders & Trays")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/coils"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/coils"}>
                   {t("Replacement Coils")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/parts"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/parts"}>
                   {t("Replacement Parts")}
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + "/shop-filtered-grid/specialty"}>
+                <Link to={process.env.PUBLIC_URL + "/shop-catalog/specialty"}>
                   {t("Specialty Items")}
                 </Link>
               </li>

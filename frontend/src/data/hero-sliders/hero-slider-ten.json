@@ -5,7 +5,7 @@
     "subtitle": "The Cage",
     "text": "Vapes, Smoke, and Accessories",
     "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/home-hero-one.png",
-    "url": "/shop-filtered-grid/lostMary"
+    "url": "/shop-catalog/disposable"
   },
   {
     "id": 2,
@@ -13,6 +13,6 @@
     "subtitle": "The Cage",
     "text": "Vapes, Smoke, and Accessories",
     "image": "https://the-cage-online-assets.s3.us-west-1.amazonaws.com/build/home-hero-one.png",
-    "url": "/shop-filtered-grid/disposable"
+    "url": "/shop-catalog/vape"
   }
 ]

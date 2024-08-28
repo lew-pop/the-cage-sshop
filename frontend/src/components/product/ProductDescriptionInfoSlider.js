@@ -233,7 +233,7 @@ const ProductDescriptionInfoSlider = ({
             {product.category.map((single, key) => {
               return (
                 <li key={key}>
-                  <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
+                  <Link to={process.env.PUBLIC_URL + `/shop-catalog/${single}`}>
                     {single}
                   </Link>
                 </li>
@@ -251,7 +251,7 @@ const ProductDescriptionInfoSlider = ({
             {product.tag.map((single, key) => {
               return (
                 <li key={key}>
-                  <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
+                  <Link to={process.env.PUBLIC_URL + `/shop-catalog/${single}`}>
                     {single}
                   </Link>
                 </li>
@@ -270,11 +270,7 @@ const ProductDescriptionInfoSlider = ({
               <i className="fa fa-facebook" />
             </a>
           </li>
-          <li>
-            <a href="//dribbble.com">
-              <i className="fa fa-dribbble" />
-            </a>
-          </li>
+          
           <li>
             <a href="//pinterest.com">
               <i className="fa fa-pinterest-p" />

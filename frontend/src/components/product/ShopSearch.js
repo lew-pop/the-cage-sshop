@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
-import { useListProductsByTagQuery } from "../../store/services/product";
+import { useListProductsByTagQuery } from "../../store/api/product";
 
 
 const ShopSearch = () => {

@@ -1,8 +1,17 @@
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-
+import { useNavigate } from "react-router-dom";
 import { setActiveSort } from "../../helpers/product";
 
 const ShopCategories = ({ categories, getSortParams }) => {
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    if (query) {
+      navigate(`/shop-catalog/${query}`);
+    }    
+  }, [query]);
   return (
     <div className="sidebar-widget">
       <h4 className="pro-sidebar-title">Categories </h4>
@@ -29,6 +38,7 @@ const ShopCategories = ({ categories, getSortParams }) => {
                       onClick={e => {
                         getSortParams("category", category);
                         setActiveSort(e);
+                        setQuery(category)
                       }}
                     >
                       {" "}

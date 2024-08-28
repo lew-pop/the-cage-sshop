@@ -5,6 +5,7 @@ from rest_framework.response import Response
 
 from base.serializers import ProductSerializer
 from base.models import Product, Review
+from django.db.models import Q  
 
 from rest_framework import status
 
@@ -27,6 +28,16 @@ def getTopProducts(request):
     return Response(serializer.data)
 
 
+@api_view(['GET'])
+def queryProducts(request, pk):
+    products = Product.objects.filter(
+        Q(name__icontains=pk) | 
+        Q(tag__icontains=pk) | 
+        Q(category__icontains=pk) | 
+        Q(full_description__icontains=pk)
+    )    
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)
 
 @api_view(['GET'])
 def getProductsByCategory(request, pk):

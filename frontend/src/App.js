@@ -6,13 +6,14 @@ import AgeVerification from "./components/age-verification/AgeVerification";
 // home page
 const Home = lazy(() => import("./pages/Home"));
 // shop pages
+const ShopCatalog = lazy(() => import("./pages/ShopCatalog"));
 const ShopGridStandard = lazy(() => import("./pages/ShopGridStandard"));
 const ShopGridFilter = lazy(() => import("./pages/ShopGridFilter"));
 const ShopFilteredGrid = lazy(() => import("./pages/ShopFilteredGrid"));
 const ShopBrandGrid = lazy(() => import("./pages/ShopBrandGrid"));
 
 // product pages
-const Product = lazy((productId) => import("./pages/Product"));
+const Product = lazy(() => import("./pages/Product"));
 const ProductTabLeft = lazy(() => import("./pages/ProductTabLeft"));
 const ProductSticky = lazy(() => import("./pages/ProductSticky"));
 const ProductSlider = lazy(() => import("./pages/ProductSlider"));
@@ -65,6 +66,10 @@ const App = () => {
              <Route path={process.env.PUBLIC_URL + "/my-component"} element={<MyComponent />} />
             Shop pages 
             */}
+            <Route
+              path={process.env.PUBLIC_URL + "/shop-catalog/:id"}
+              element={<ShopCatalog />}
+            />
             <Route
               path={process.env.PUBLIC_URL + "/shop-grid-standard"}
               element={<ShopGridStandard />}

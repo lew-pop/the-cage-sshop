@@ -5,7 +5,7 @@ import { getDiscountPrice } from "../helpers/product";
 import SEO from "../components/seo";
 import LayoutOne from "../layouts/LayoutOne";
 import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
-import { useCreateOrderMutation } from "../store/services/order";
+import { useCreateOrderMutation } from "../store/api/order";
 
 const Checkout = () => {
   let cartTotalPrice = 0;

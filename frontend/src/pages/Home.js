@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 import SEO from "../components/seo";
 import LayoutOne from "../layouts/LayoutOne";
@@ -9,12 +9,30 @@ import ShopByBrandSlider from "../wrappers/category/ShopByBrandSlider";
 
 import MyProductSlider from "../wrappers/product/MyProductSlider";
 import MySlider from "../wrappers/product/MySlider";
-import { useListProductsQuery } from "../store/services/product";
-import { setProducts } from "../store/slices/product-slice"
+import { useListProductsQuery } from "../store/api/product";
+import { setProducts, setProductCount } from "../store/slices/product-slice"
 import { store } from "../store/store";
 
 const Home = () => {
-      
+  const { data, isLoading, error } = useListProductsQuery(); 
+  store.dispatch(setProducts(data)); 
+  console.log("Home Data:", data);
+   
+  useEffect(() => {
+    if (data) {
+      store.dispatch(setProductCount(data.length));
+      console.log("setProductCount w/ ", data.length);
+    }
+    let products;
+    if (isLoading){
+      products = <div>Loading...</div>
+    } else if (error) {
+      products= <div>Error: {error.message}</div>   
+    } else {
+      products = JSON.stringify(data)
+    }
+  }, [data, isLoading, error]);
+  
   return (
     <Fragment>
       <SEO
