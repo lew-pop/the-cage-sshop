@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import SectionTitleSeven from "../../components/section-title/SectionTitleSeven";
+import SectionTitle from "../../components/section-title/SectionTitle.js";
 import SectionTitleFour from "../../components/section-title/SectionTitleFour";
 import ProductGridTwelve from "./ProductGridTwelve";
 
@@ -13,12 +13,11 @@ const MyProductSlider = ({
   return (
     <div className={clsx("related-product-area", spaceBottomClass, colorClass)}>
       <div className="container">
-        <SectionTitleSeven
-          titleText="Products"
-          subtitleText="Vape Products"
+      <SectionTitle
+          titleText="Shop Our Products"
           positionClass="text-center"
           spaceClass="mb-55"
-          borderClass="no-border"
+          borderClass=""
         />
         <SectionTitleFour
           titleText={modelName}
